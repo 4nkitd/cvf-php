@@ -1,0 +1,8 @@
+{
+  "appUrl": "http://localhost/sbadmin3/Public/",
+  "appName": "Covid-19",
+  "database.host": "localhost",
+  "database.name": "covid",
+  "database.user": "root",
+  "database.pass": ""
+}
