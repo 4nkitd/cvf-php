@@ -80,4 +80,4 @@ function js_write_email($email)
 			</script>
 			<noscript>Please enable JavaScript to view emails</noscript>
 		';
-}s
+}
