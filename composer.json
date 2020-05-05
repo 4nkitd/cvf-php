@@ -11,6 +11,7 @@
   ],
   "minimum-stability": "alpha",
   "require": {
-    "phpmailer/phpmailer": "^6.1"
+    "phpmailer/phpmailer": "^6.1",
+    "maximebf/debugbar": "^1.16"
   }
 }

@@ -1,13 +1,14 @@
 <?php
 
+
 class cvf
 {
 
-    const VERSION = '0.0.2';
+    const VERSION = '0.1.1';
 
     function __construct()
     {
-        
+        $this->debug_bar();
     }
 
     public function env(string $property)
@@ -44,5 +45,46 @@ class cvf
         }
     }
 
-    
+    public function is_cli()
+	{
+		return (PHP_SAPI === 'cli' OR defined('STDIN'));
+	}
+
+    public function is_php(string $version)
+    {
+        static $_is_php;
+		$version = (string) $version;
+
+		if ( ! isset($_is_php[$version]))
+		{
+			$_is_php[$version] = version_compare(PHP_VERSION, $version, '>=');
+		}
+
+		return $_is_php[$version];
+    }
+
+    public function is_https()
+	{
+		if ( ! empty($_SERVER['HTTPS']) && strtolower($_SERVER['HTTPS']) !== 'off')
+		{
+			return TRUE;
+		}
+		elseif (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && strtolower($_SERVER['HTTP_X_FORWARDED_PROTO']) === 'https')
+		{
+			return TRUE;
+		}
+		elseif ( ! empty($_SERVER['HTTP_FRONT_END_HTTPS']) && strtolower($_SERVER['HTTP_FRONT_END_HTTPS']) !== 'off')
+		{
+			return TRUE;
+		}
+
+		return FALSE;
+	}
+
+    public function debug_bar()
+    {
+        if(DEBUG !== TRUE) return;
+
+    }
+
 }

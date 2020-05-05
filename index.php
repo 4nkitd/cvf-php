@@ -1,27 +1,30 @@
 <?php
 
-if (! defined('DS'))
+// 
+// cfv framework
+// 
+
+// Valid PHP Version?
+$minPHPVersion = '7';
+if (phpversion() < $minPHPVersion)
 {
-	define('DS', DIRECTORY_SEPARATOR);
+	die("Your PHP version must be {$minPHPVersion} or higher. Current version: " . phpversion());
 }
 
-if (! defined('APPPATH'))
-{
-	define('APPPATH', __DIR__ . DIRECTORY_SEPARATOR);
-}
+// debuging true, false
+define('DEBUG', TRUE);
 
+// CHanging current dir 
+chdir(__DIR__);
 
-require_once APPPATH.'core'.DS.'err.php';
-require_once APPPATH.'core'.DS.'cvf.php';
+define('DS', DIRECTORY_SEPARATOR);
+
+define('APPPATH', __DIR__ . DS);
+
+date_default_timezone_set('Asia/Calcutta');
+
+define('ROUTES',APPPATH.'app'.DS.'routes.php');
+
 require_once APPPATH.'core'.DS.'bootstarp.php';
-require_once APPPATH.'core'.DS.'helpers.php';
-require_once APPPATH.'core'.DS.'controller.php';
-require_once APPPATH.'core'.DS.'view.php';
-
-$composer = APPPATH.'vendor'.DS.'autoload.php';
-
-if (file_exists($composer)) {
-	require_once $composer;
-} 
 
 $app = new Bootstrap;

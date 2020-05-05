@@ -1,5 +1,6 @@
 {
-  "appUrl": "http://localhost/sbadmin3/Public/",
+  "https": false,
+  "appUrl": "localhost/cvf",
   "appName": "Covid-19",
   "database.host": "localhost",
   "database.name": "covid",
