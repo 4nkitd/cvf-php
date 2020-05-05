@@ -78,6 +78,6 @@ function js_write_email($email)
 				var e = "</a>";
 				document.write(a+b+"@"+c+d+b+"@"+c+e);
 			</script>
-			<noscript>Please enable JavaScript to view emails</noscript>
+			<noscript>Please enable JavaScript to view emdails</noscript>
 		';
 }
