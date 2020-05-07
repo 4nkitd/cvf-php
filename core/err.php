@@ -8,10 +8,10 @@ class Err extends cvf
         $this->view->render('error',['err'=>$info]);
     }
 
-    public function show_php_error($severity, $message, $filepath, $line)
+    public function error($severity, $message, $filepath, $line)
 	{
 		
-		if ( ! is_cli())
+		if ( ! $this->is_cli())
 		{
 			$filepath = str_replace('\\', '/', $filepath);
 			if (FALSE !== strpos($filepath, '/'))

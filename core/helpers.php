@@ -69,7 +69,7 @@ function js_write_email($email)
 {
     $pieces = explode("@", $email);
 
-    echo '
+    return '
 			<script type="text/javascript">
 				var a = "<a href=\'mailto:";
 				var b = "' . $pieces[0] . '";

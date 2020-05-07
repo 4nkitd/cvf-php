@@ -5,7 +5,7 @@
 // 
 
 // Valid PHP Version?
-$minPHPVersion = '7';
+$minPHPVersion = '7.0';
 if (phpversion() < $minPHPVersion)
 {
 	die("Your PHP version must be {$minPHPVersion} or higher. Current version: " . phpversion());

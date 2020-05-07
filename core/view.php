@@ -2,7 +2,7 @@
 
 class View extends Controller
 {
-    function __construct($db ='')
+    function __construct(object $db = null)
     {
         parent::__construct();
         
