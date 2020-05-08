@@ -12,6 +12,7 @@
   "minimum-stability": "alpha",
   "require": {
     "phpmailer/phpmailer": "^6.1",
-    "maximebf/debugbar": "^1.16"
+    "maximebf/debugbar": "^1.16",
+    "guzzlehttp/guzzle": "~6.0"
   }
 }
