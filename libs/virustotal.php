@@ -1,5 +1,10 @@
 <?php
 
+/* 
+    * @author     : 4nkitd@github
+    * @authorName : Ankit
+*/
+
 class VirusTotal extends cvf
 {
 
@@ -13,9 +18,8 @@ class VirusTotal extends cvf
 
     public function url($domain)
     {
-        //get API KEY from environment, or set your API key here
-        $api_key = $this->apiKey;
-        $data = array('apikey' => $api_key, 'domain' => $domain);
+        
+        $data = array('apikey' => $this->apiKey, 'domain' => $domain);
         $ch = curl_init();
         $url = 'https://www.virustotal.com/vtapi/v2/domain/report?';
         $url .= http_build_query($data); // append query params

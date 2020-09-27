@@ -1,5 +1,10 @@
 <?php
 
+/* 
+    * @author     : 4nkitd@github
+    * @authorName : Ankit
+*/
+
 class Database extends cvf
 {
     private $conn;

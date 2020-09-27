@@ -1,6 +1,11 @@
 <?php
 
-class input extends cvf
+/* 
+    * @author     : 4nkitd@github
+    * @authorName : Ankit
+*/
+
+class Input extends cvf
 {
     public function __construct()
     {

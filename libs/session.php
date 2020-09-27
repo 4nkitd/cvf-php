@@ -1,6 +1,11 @@
 <?php
 
-class session extends cvf
+/* 
+    * @author     : 4nkitd@github
+    * @authorName : Ankit
+*/
+
+class Session extends cvf
 {
     public function __construct()
     {
