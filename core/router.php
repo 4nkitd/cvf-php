@@ -47,7 +47,7 @@ class Router extends Bootstrap
         $file =  'app'. DS . $controller_name . '.php';
 
         if (!file_exists($file)){
-            new Err('Controller Not Found',__FILE__);
+            new Err('Controller Not Found',__FILE__.':'.__LINE__);
         }  
 
             require_once $file;
