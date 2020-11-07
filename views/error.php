@@ -9,12 +9,18 @@
 <body class="bg-light">
 
     <nav class="navbar navbar-dark bg-dark">
-        <span class="navbar-brand mb-0 h1">CVF</span>
+        <span class="navbar-brand mb-0 h1">CVF | Error</span>
     </nav>
 
     <div class="card m-4 p-4">
 
-        <h1>Error : </h1>
+        <h1>Error : <strong style="color:red;" > <?php print_r($this->data['err']); ?></strong></h1>
+
+    </div>
+
+    <div class="card m-4 p-4">
+
+        <h5>Traceback : <strong style="color:red;" > <?php print_r($this->data['file']); ?> </strong> </h5>
 
     </div>
 </body>

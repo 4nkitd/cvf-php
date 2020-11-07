@@ -1,10 +1,6 @@
 <?php
 
-function emailGavtor($email,$size=32){
 
-    return 'http://www.gravatar.com/avatar/' . md5($email) . '?s='.$size;
-
-}
 
 function is_https(){
     if (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off'

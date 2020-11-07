@@ -86,19 +86,19 @@ class Auth extends Controller
                 try {
 
                     $mail->isSMTP();                                            // Send using SMTP
-                    $mail->Host       = 'mail.dagar.in';                    // Set the SMTP server to send through
+                    $mail->Host       = 'mail.example.in';                    // Set the SMTP server to send through
                     $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
-                    $mail->Username   = 'verify@dagar.in';                     // SMTP username
-                    $mail->Password   = 'admin@dagar';                               // SMTP password
+                    $mail->Username   = 'verify@example.in';                     // SMTP username
+                    $mail->Password   = 'admin@example';                               // SMTP password
                     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
                     $mail->Port       = 587;                                    // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
     
                     //Recipients
-                    $mail->setFrom('verify@dagar.in', 'Verify');
+                    $mail->setFrom('verify@example.in', 'Verify');
                          // Add a recipient
                     $mail->addAddress($user['email']);    
                                // Name is optional
-                    $mail->addReplyTo('no-reply@dagar.com', 'No-reply');
+                    $mail->addReplyTo('no-reply@example.com', 'No-reply');
     
                     // Content
                     $mail->isHTML(true);                                  // Set email format to HTML

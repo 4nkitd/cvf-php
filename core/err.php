@@ -5,7 +5,8 @@ class Err extends cvf
     function __construct($info,$Location)
     {
         $this->view = new View;
-        $this->view->render('error',['err'=>$info]);
+		$this->view->render('error',['err'=>$info,'file'=>$Location]);
+		die;
     }
 
     public function error($severity, $message, $filepath, $line)
