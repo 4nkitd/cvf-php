@@ -6,7 +6,5 @@
   "database.name": "covid",
   "database.user": "root",
   "database.pass": "",
-  "twitch-api.client_id": "ip4y33p3ebxj5320k9uoi2ids7jbqr",
-  "twitch-api.client_secret": "df7z51uakdvgdwlr5gbe7698a5zu6l",
-  "twitch-api.redirect_url": "http://localhost/cvf/twitch"
+
 }
