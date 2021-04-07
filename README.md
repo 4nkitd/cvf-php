@@ -18,7 +18,7 @@
 > you can use command bellow to serve application more commands coming soon
 
 ```bash
-php cvf servev
+php cvf serve
 ```
 > ___
 # Do Not Recommend For Production
