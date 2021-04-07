@@ -15,4 +15,12 @@ class Controller extends cvf
         header('Location: '.$goto);
         exit;
     }
+
+    public function json_response(array $response)      
+    {
+        header('Content-Type','application/json');
+        $resp = json_encode($response,true);
+
+        echo $resp ?? '';
+    }
 }

@@ -4,7 +4,7 @@
 class cvf
 {
 
-    const VERSION = '0.1.1';
+    const VERSION = '0.1.2';
 
     function __construct()
     {
@@ -18,7 +18,7 @@ class cvf
             $config = file_get_contents($path);
             if(!empty($config)){
                 $config = json_decode($config);
-                if(array_key_exists($property,$config)){
+                if(property_exists($property,$config)){
                     return $config->$property;
                 } else {
                     throw new Exception('Config Property Not Found ', 1);

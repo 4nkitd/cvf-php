@@ -65,23 +65,6 @@ function resize_image($file, $w, $h, $crop = false)
     return 'data:image/jpeg;base64,' . base64_encode($data);
 }
 
-function js_write_email($email)
-{
-    $pieces = explode("@", $email);
-
-    return '
-			<script type="text/javascript">
-				var a = "<a href=\'mailto:";
-				var b = "' . $pieces[0] . '";
-				var c = "' . $pieces[1] . '";
-				var d = "\' class=\'email\'>";
-				var e = "</a>";
-				document.write(a+b+"@"+c+d+b+"@"+c+e);
-			</script>
-			<noscript>Please enable JavaScript to view emdails</noscript>
-		';
-}
-
 function response(array $response = [],int $code = 200,string $type = 'json'){
 
     $statusCodes = [

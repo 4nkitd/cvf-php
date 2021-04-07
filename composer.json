@@ -1,18 +1,15 @@
 {
   "name": "cvf/framework",
-  "description": "a php framework the is fast,modular and does not imlement models",
-  "type": "project",
+  "description": "the php framework",
+  "type": "framework",
   "license": "MIT",
   "authors": [
     {
-      "name": "4nkitd",
-      "email": "4nkitd@gmail.com"
+      "name": "github.com/4nkitd"
     }
   ],
   "minimum-stability": "alpha",
   "require": {
-    "phpmailer/phpmailer": "^6.1",
-    "maximebf/debugbar": "^1.16",
     "guzzlehttp/guzzle": "~6.0"
   }
 }

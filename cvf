@@ -1,0 +1,10 @@
+#!/usr/bin/php
+<?php
+
+require_once('config.php');
+
+if($argv[1] === 'serve'){
+    
+    exec('PHP -S '. IP. ':'. PORT.' ./public/index.php');
+
+}

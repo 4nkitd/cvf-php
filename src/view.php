@@ -11,6 +11,7 @@ class View extends Controller
             $this->db = $db;
 
         }
+    
     }
 
     public function render($view_name, $view_data = [])
@@ -18,10 +19,12 @@ class View extends Controller
         $this->data = $view_data;
         
         require_once 'views/' . $view_name . '.php';
+
     }
 
     public function load(string $view_name)
     {
         require_once 'views/' . $view_name . '.php';
     }
+
 }

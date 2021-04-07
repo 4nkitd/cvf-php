@@ -1,6 +1,6 @@
 {
   "https": false,
-  "appUrl": "http://localhost/cvf/",
+  "appUrl": "http://localhost:88/",
   "appName": "Covid-19",
   "database.host": "localhost",
   "database.name": "covid",
