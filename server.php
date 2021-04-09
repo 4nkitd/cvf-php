@@ -1,18 +1,14 @@
 <?php
 
-require_once('config.php');
+define('APP_DIR',__DIR__.DIRECTORY_SEPARATOR);
 
-// Valid PHP Version?
-if ((int)phpversion() < (int)MIN_PHP_VERSION)
-{
-    $msg = "Your PHP version must be "
-    . MIN_PHP_VERSION ." or higher."
-    ." Current version: " . phpversion();
-	
-    die($msg);
-}
+require_once(__DIR__.DIRECTORY_SEPARATOR.'vendor'.DIRECTORY_SEPARATOR.'autoload.php');
 
 
-require_once(SRC_PATH. 'bootstarp.php');
+use App\Lib\App;
+use App\Lib\Router;
+use App\Lib\Request;
+use App\Lib\Response;
 
-$app = new Bootstrap;
+
+App::run();

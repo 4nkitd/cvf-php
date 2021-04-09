@@ -1,15 +1,12 @@
 {
-  "name": "cvf/framework",
-  "description": "the php framework",
-  "type": "framework",
-  "license": "MIT",
-  "authors": [
-    {
-      "name": "github.com/4nkitd"
+    "name": "cvf/php",
+    "autoload": {
+        "psr-4": {"CVF\\": "src/"},
+        "psr-4": {"APP\\": "routes/"},
+        "psr-4": {"APP\\": "libs/"},
+        "psr-4": {"APP\\": "helpers/"}
+    },
+     "require" : {
+        "php" : ">=7.1"
     }
-  ],
-  "minimum-stability": "alpha",
-  "require": {
-    "guzzlehttp/guzzle": "~6.0"
-  }
 }

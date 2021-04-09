@@ -1,4 +1,9 @@
 <?php
 
-$route['default'] = [ 'POST','Main/index'];
+namespace App;
 
+use CVF\Routes;
+use App\Home;
+
+
+Routes::get('/', Home::index );

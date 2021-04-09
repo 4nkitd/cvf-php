@@ -1,5 +1,3 @@
 <?php
 
-define('PUBLIC_DIR_LOCATION', __DIR__ . '/../server.php');
-
-require_once(PUBLIC_DIR_LOCATION);
+require_once(__DIR__.DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR.'server.php');
